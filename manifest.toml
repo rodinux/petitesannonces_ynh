@@ -39,7 +39,7 @@ ram.runtime = "50M"
     [install.titre_page]
     ask = "Titre de la page d'acceuil"
     type = "string"
-    optional = true
+    default = "Petites Annonces"
 
     [install.categories]
     ask = "Éditer un fichier categories.csv pour personnaliser les catégories d'annonces ?"

@@ -36,16 +36,21 @@ ram.runtime = "50M"
     type = "group"
     default = "visitors"
 
+    [install.titre_page]
+    ask = "Titre de la page d'acceuil"
+    type = "string"
+    optional = true
+
     [install.categories]
-    ask.fr = "Éditer un fichier categories.csv pour personnaliser les catégories d'annonces ?"
-    help.fr  = "Pour éditer le fichier categories.cvs, téléchargez le fichier original en cliquant ici https://framagit.org/anto1ne/petitesannonces/-/raw/master/bdd/categories.csv?ref_type=heads&inline=false, éditez-le localement avec votre éditeur de texte en respectant son format (bien garder les `1;` , `2;`, etc...), puis ajoutez-le en cliquant sur le champ ci-dessus"
+    ask = "Éditer un fichier categories.csv pour personnaliser les catégories d'annonces ?"
+    help  = "Pour éditer le fichier categories.cvs, téléchargez le fichier original en cliquant ici https://framagit.org/anto1ne/petitesannonces/-/raw/master/bdd/categories.csv?ref_type=heads&inline=false, éditez-le localement avec votre éditeur de texte en respectant son format (bien garder les `1;` , `2;`, etc...), puis ajoutez-le en cliquant sur le champ ci-dessus"
     type = "file"
     bind = "/tmp/categories.csv"
     optional = true
 
     [install.regions]
-    ask.fr = "Éditer un fichier regions.csv pour personnaliser les lieux des annonces ?"
-    help.fr = "Pour éditer le fichier regions.cvs, téléchargez le ici https://framagit.org/anto1ne/petitesannonces/-/raw/master/bdd/regions.csv?ref_type=heads&inline=false, éditez-le  localement avec votre éditeur de texte en respectant son format (bien garder les `1;`, `2;`, etc...), puis ajoutez-le en cliquant sur le champ ci-dessus"
+    ask = "Éditer un fichier regions.csv pour personnaliser les lieux des annonces ?"
+    help = "Pour éditer le fichier regions.cvs, téléchargez le ici https://framagit.org/anto1ne/petitesannonces/-/raw/master/bdd/regions.csv?ref_type=heads&inline=false, éditez-le  localement avec votre éditeur de texte en respectant son format (bien garder les `1;`, `2;`, etc...), puis ajoutez-le en cliquant sur le champ ci-dessus"
     type = "file"
     bind = "/tmp/regions.csv"
     optional = true
@@ -64,7 +69,7 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.apt]
-    packages = "mariadb-server, php.8.2-fpm, php.8.2-mysql"
+    packages = "mariadb-server, php.7.4-fpm, php.7.4-mysql"
 
     [resources.database]
     type = "mysql"
